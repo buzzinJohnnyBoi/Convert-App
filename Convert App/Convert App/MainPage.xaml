@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Convert_App.MainPage">
+    <Grid BackgroundColor="{StaticResource TheBackgroundColor}" x:Name="Grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Button Text="Acceleration" Grid.Row="0" Grid.Column="0" Clicked="ChangeMode_Button" Padding="5, 0, 5, 0" BackgroundColor="LightGray"/>
+        <Button Text="Amt. of Substance" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Padding="5, 0, 5, 0" Margin="0, 0, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Angle" Grid.Row="0" Grid.Column="3" Margin="0, 0, 0, 0" Clicked="ChangeMode_Button" Padding="5, 0, 5, 0" BackgroundColor="LightGray"/>
+
+        <Button Text="Area" Grid.Row="1" Grid.Column="0" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" Padding="5, 0, 5, 0" BackgroundColor="LightGray"/>
+        <Button Text="Computer" Grid.Row="1" Grid.Column="1"  Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" Padding="5, 0, 5, 0" BackgroundColor="LightGray"/>
+        <Button Text="Concentration" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+
+        <Button Text="Density" Grid.Row="2" Grid.Column="0" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Distance" Grid.Row="2" Grid.Column="1" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Energy" Grid.Row="2" Grid.Column="2"  Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Flow" Grid.Row="2" Grid.Column="3" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+
+        <Button Text="Force" Grid.Row="3" Grid.Column="0" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Light" Grid.Row="3" Grid.Column="1" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Mass" Grid.Row="3" Grid.Column="2"  Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Power" Grid.Row="3" Grid.Column="3" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+
+        <Button Text="Pressure" Grid.Row="4" Grid.Column="0" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Speed" Grid.Row="4" Grid.Column="1" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Temperature" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+
+        <Button Text="Time" Grid.Row="5" Grid.Column="0" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Torque" Grid.Row="5" Grid.Column="1" Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+        <Button Text="Volume" Grid.Row="5" Grid.Column="2"  Margin="0, -15, 0, 0" Clicked="ChangeMode_Button" BackgroundColor="LightGray"/>
+
+
+
+
+
+
+
+        <Entry Keyboard="Numeric"
+               Grid.Row="6"
+               Grid.Column="0"
+               x:Name="InputValue" 
+               TextChanged="OnInputChanged"
+               Placeholder="Input Value"
+               Grid.ColumnSpan="2"
+               BackgroundColor="Orange"/>
+        <Picker Title="Select" 
+                Grid.Row="6" 
+                Grid.Column="2" 
+                VerticalOptions="Center" 
+                x:Name="InputPicker" 
+                SelectedIndexChanged="InputPicker_SelectedIndexChanged"
+                Grid.ColumnSpan="2"
+                TextColor="White"
+                BackgroundColor="Brown">
+        </Picker>
+            
+            
+        <Entry Keyboard="Numeric"
+               Grid.Row="7"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Placeholder="Output Value"
+               x:Name="OutputValue" 
+               TextChanged="OnOutputChanged"
+               BackgroundColor="Aqua"/>
+
+        <Picker Title="Select" 
+                Grid.Row="7" 
+                Grid.Column="2" 
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center" 
+                x:Name="OutputPicker" 
+                TextColor="White"
+                BackgroundColor="Brown"
+                SelectedIndexChanged="OutputPicker_SelectedIndexChanged">
+        </Picker>
+
+        <Button Grid.Row="8" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="2"
+                x:Name="btn1"
+                Clicked="btn1_Clicked"
+                Text="How are you doinng"
+                />
+
+    </Grid>
+
+</ContentPage>
